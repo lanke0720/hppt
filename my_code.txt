@@ -1,0 +1,155 @@
+ git Administrator@PC-201411231408 MINGW64 /f/code/my_git/C
+$ git init///////////////////////////////////////////////////////
+Initialized empty Git repository in F:/code/my_git/C/.git/
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git config --global user.name "lanke"//////////////////////////
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git config --global user.email "1600977813@qq.com"/////////////
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git remote add origin git@github.com:lanke0720/c.git///////////
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git add .//////////////////////////////////////////////////////
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git commit -m "hello world"////////////////////////////////////
+[master (root-commit) b4b05bc] hello world
+ 1 file changed, 6 insertions(+)
+ create mode 100644 hello world.txt
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git push -u origin master//////////////////////////////////////
+To git@github.com:lanke0720/c.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:lanke0720/c.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git pull origin development//////////////////////////////////////
+fatal: Couldn't find remote ref development
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git pull --rebase origin master//////////////////////////////////git
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:lanke0720/c
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Applying: hello world
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$ git push -u origin master/////////////////////////////////////////
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:lanke0720/c.git
+   d6e260f..9a1455c  master -> master
+Branch master set up to track remote branch master from origin.
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/C (master)
+$
+22
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+2017_06_01
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct
+$ git init
+Initialized empty Git repository in F:/code/my_git/data_struct/.git/
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git config --global user.name "lanke0720"
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git config --global user.email "1600977813@qq.com"
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git remote add origin git@github.com:lanke0720/data_struct.git
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git add test.txt
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git commit -m "test"
+[master (root-commit) 0fa16a8] test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git push -u origin master
+To git@github.com:lanke0720/data_struct.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:lanke0720/data_struct.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git pull
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:lanke0720/data_struct
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git push -u origin master
+To git@github.com:lanke0720/data_struct.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:lanke0720/data_struct.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git config branch.master.remote origin
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git config branch.master.merge refs/heads/master
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git pull
+Merge made by the 'recursive' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$ git push -u origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 494 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:lanke0720/data_struct.git
+   ff4370b..d394d0b  master -> master
+Branch master set up to track remote branch master from origin.
+
+Administrator@PC-201411231408 MINGW64 /f/code/my_git/data_struct (master)
+$
